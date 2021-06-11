@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.0.2" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="$(AbpVersion)" />
     <ProjectReference Include="..\Volo.Abp.WorkFlowManagement.Application.Contracts\Volo.Abp.WorkFlowManagement.Application.Contracts.csproj" />
   </ItemGroup>
 
