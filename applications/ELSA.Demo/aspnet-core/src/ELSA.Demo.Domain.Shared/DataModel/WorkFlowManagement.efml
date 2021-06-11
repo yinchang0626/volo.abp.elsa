@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore namespace="ELSA_Demo" p1:name="Model" p1:Guid="3e327aa3-7400-4741-8155-f8cb157aec59" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="WorkFlowManagementWorkflowInstance" entity-set="WorkFlowManagementWorkflowInstances" table="WorkFlowManagementWorkflowInstances" schema="dbo" p1:Guid="f3a5105d-f914-42b8-a102-49f329ceb05a">
+    <id name="Id" type="String" p1:ValidateMaxLength="450" p1:ValidateRequired="true" p1:Guid="41a0657c-0268-467d-8c82-5eea1d9fae9f">
+      <column name="Id" not-null="True" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </id>
+    <property name="DefinitionId" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8e3cfb95-7aec-4e2d-8826-f5f492952ecc">
+      <column name="DefinitionId" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Version" type="Int32" p1:ValidateRequired="true" p1:Guid="46e99976-1ad0-4b68-851b-31595f436f06">
+      <column name="Version" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Status" type="String" p1:ValidateRequired="true" p1:Guid="8a841a66-8f68-44a4-9e0f-51f768203337">
+      <column name="Status" not-null="True" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="CorrelationId" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fd73af85-597b-4a80-bc7a-17ee9e3e47f4">
+      <column name="CorrelationId" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="StartedAt" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="bc70e3e9-0ecc-422e-90e1-47aa40a91167">
+      <column name="StartedAt" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="FinishedAt" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="190425cf-f940-4c9f-9bfa-d92b2676b8bb">
+      <column name="FinishedAt" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="FaultedAt" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b5ac26c3-ea2f-45cc-aa94-5a5de60f7957">
+      <column name="FaultedAt" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="AbortedAt" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="28dcec7e-a50d-4582-bddd-9a1780f4b83f">
+      <column name="AbortedAt" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="Scope" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0c36594b-d091-4b99-b096-b3345aec545d">
+      <column name="Scope" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Input" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5c897c83-fb65-42ae-a687-5a405b93528d">
+      <column name="Input" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="ExecutionLog" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="18ba4fdf-64f6-4598-bf97-4fdf4c0ce564">
+      <column name="ExecutionLog" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Fault" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="424cf015-6479-48b2-a031-b64693fe7c2e">
+      <column name="Fault" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="ExtraProperties" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d296f939-a192-4c3d-b4ef-7f4450406441">
+      <column name="ExtraProperties" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="ConcurrencyStamp" type="String" p1:nullable="True" p1:ValidateMaxLength="40" p1:ValidateRequired="false" p1:Guid="f91ddaad-94cd-4b20-a86f-7309919bf5e0">
+      <column name="ConcurrencyStamp" not-null="False" length="40" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="CreationTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="2c3e2caa-c150-461d-8087-5ffc6465c212">
+      <column name="CreationTime" not-null="True" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="CreatorId" type="Guid" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="253f5589-01bf-4bc5-b791-b8140e7d9ea2">
+      <column name="CreatorId" not-null="False" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="LastModificationTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e565cac3-dfb9-4684-9a07-7d813694ea88">
+      <column name="LastModificationTime" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="LastModifierId" type="Guid" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4dfd2d2c-7e33-46e9-89f8-08c2f06cd1e4">
+      <column name="LastModifierId" not-null="False" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="IsDeleted" type="Boolean" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="c9c46664-d554-4fd2-baa1-d0e7a298659e">
+      <column name="IsDeleted" default="CONVERT([bit],(0))" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="DeleterId" type="Guid" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ab63bbb3-5ad6-4ac8-82f6-5a8f2c6a874f">
+      <column name="DeleterId" not-null="False" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="DeletionTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="708a3cef-978e-49d4-bd07-e6926f9b44e2">
+      <column name="DeletionTime" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="WorkFlowManagementWorkflowDefinitionVersion" entity-set="WorkFlowManagementWorkflowDefinitionVersions" table="WorkFlowManagementWorkflowDefinitionVersions" schema="dbo" p1:Guid="60cbba8e-6735-45db-83f8-bf569fcad34b">
+    <id name="Id" type="String" p1:ValidateMaxLength="450" p1:ValidateRequired="true" p1:Guid="2fff5596-478a-4b55-b7c5-157b18a1a443">
+      <column name="Id" not-null="True" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </id>
+    <property name="Version" type="Int32" p1:ValidateRequired="true" p1:Guid="4e3df1d3-075f-4576-a244-a58d73153b16">
+      <column name="Version" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1331c779-7241-4356-827c-468a810d1771">
+      <column name="Name" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Description" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0adbd6b9-5395-40c8-93db-cc2927c37d5e">
+      <column name="Description" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Variables" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="47214382-74e2-4215-abda-5c5969832139">
+      <column name="Variables" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="IsSingleton" type="Boolean" p1:ValidateRequired="true" p1:Guid="3c8d644d-6b89-433d-b980-2cd76108ab29">
+      <column name="IsSingleton" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IsDisabled" type="Boolean" p1:ValidateRequired="true" p1:Guid="b3fa4776-5873-44d1-8a10-6e7c17612aeb">
+      <column name="IsDisabled" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IsPublished" type="Boolean" p1:ValidateRequired="true" p1:Guid="7b5baf6b-661c-4ef1-a5d6-9fefb472394c">
+      <column name="IsPublished" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IsLatest" type="Boolean" p1:ValidateRequired="true" p1:Guid="e0adb1c8-abb1-4ded-a656-8f9b93dd4a59">
+      <column name="IsLatest" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="ExtraProperties" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="7c9f0b83-e3c2-49ac-874e-5503433c963a">
+      <column name="ExtraProperties" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="ConcurrencyStamp" type="String" p1:nullable="True" p1:ValidateMaxLength="40" p1:ValidateRequired="false" p1:Guid="4b516333-d82c-41de-8347-5be21702383d">
+      <column name="ConcurrencyStamp" not-null="False" length="40" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="CreationTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="05437eb8-614f-4021-af37-94bded47ad07">
+      <column name="CreationTime" not-null="True" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="CreatorId" type="Guid" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b3bdcbac-0a5c-4369-bd8c-cdec3b49dd43">
+      <column name="CreatorId" not-null="False" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="LastModificationTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0b5a0b94-aba3-4b88-b48d-ea37f660e75e">
+      <column name="LastModificationTime" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="LastModifierId" type="Guid" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a05bc52c-50e3-4f76-b91a-8e5abd7b3967">
+      <column name="LastModifierId" not-null="False" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="IsDeleted" type="Boolean" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="d962a44c-8da3-4960-971f-0be429a98251">
+      <column name="IsDeleted" default="CONVERT([bit],(0))" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="DeleterId" type="Guid" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="00d589e6-fcc1-4f41-9818-5706f341b4e1">
+      <column name="DeleterId" not-null="False" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="DeletionTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="de800bdd-09c7-471c-8fcb-16c953011155">
+      <column name="DeletionTime" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="WorkFlowManagementConnectionDefinition" entity-set="WorkFlowManagementConnectionDefinitions" table="WorkFlowManagementConnectionDefinitions" schema="dbo" p1:Guid="e49be52b-4a88-42c9-adb6-375472521725">
+    <id name="Id" type="String" p1:ValidateMaxLength="450" p1:ValidateRequired="true" p1:Guid="75d845d8-2a09-4fd6-8b10-9f79cef16d52">
+      <column name="Id" not-null="True" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </id>
+    <property name="WorkflowDefinitionVersionId" type="String" p1:nullable="True" p1:ValidateMaxLength="450" p1:ValidateRequired="false" p1:Guid="45558aa6-2988-4426-ab8f-02e067a4f98e">
+      <column name="WorkflowDefinitionVersionId" not-null="False" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="SourceActivityId" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a6b27b72-2dde-4a71-9622-6eed6ef506b3">
+      <column name="SourceActivityId" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="DestinationActivityId" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cf17c56a-8829-4bb6-a30a-6d92f10cb4c9">
+      <column name="DestinationActivityId" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Outcome" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a9a701a0-ac5f-4a48-adfd-e1845d2e6477">
+      <column name="Outcome" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="WorkFlowManagementBlockingActivity" entity-set="WorkFlowManagementBlockingActivities" table="WorkFlowManagementBlockingActivitys" schema="dbo" p1:Guid="efd8fe95-3e00-4e0f-9ada-eae5077453b3">
+    <id name="Id" type="String" p1:ValidateMaxLength="450" p1:ValidateRequired="true" p1:Guid="2d5e1805-93b4-46f5-b59e-3931a77ae360">
+      <column name="Id" not-null="True" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </id>
+    <property name="WorkflowInstanceId" type="String" p1:nullable="True" p1:ValidateMaxLength="450" p1:ValidateRequired="false" p1:Guid="8e00ab01-05a9-4db9-8758-c560344c7699">
+      <column name="WorkflowInstanceId" not-null="False" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ActivityId" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2ca68df4-e080-45fd-84b0-6a3fb4c67cf1">
+      <column name="ActivityId" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="ActivityType" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="792e26f6-4470-4866-8eba-4f55019fcfd1">
+      <column name="ActivityType" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="WorkFlowManagementActivityInstance" entity-set="WorkFlowManagementActivityInstances" table="WorkFlowManagementActivityInstances" schema="dbo" p1:Guid="0909fe37-eeb3-4ab3-a6a6-436d3a5a74e6">
+    <id name="Id" type="String" p1:ValidateMaxLength="450" p1:ValidateRequired="true" p1:Guid="7205b046-2c92-471a-823d-afaeb83bd1e9">
+      <column name="Id" not-null="True" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </id>
+    <property name="ActivityId" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="687fb6f0-dcf3-43f8-b7e0-831614aecfe5">
+      <column name="ActivityId" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="WorkflowInstanceId" type="String" p1:nullable="True" p1:ValidateMaxLength="450" p1:ValidateRequired="false" p1:Guid="e1edfe0c-1890-4544-b531-d9ef6a8fa884">
+      <column name="WorkflowInstanceId" not-null="False" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Type" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f1dc0850-749c-4f45-822b-72f34e56f8c8">
+      <column name="Type" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="State" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="023dcf2d-e5d7-422f-a00e-fec4265e8504">
+      <column name="State" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Output" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5b05523c-1598-4997-8af8-9d64dd5233df">
+      <column name="Output" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="HandlerUserId" type="Guid" p1:ValidateRequired="true" p1:Guid="8b08fc1e-49cf-4c4e-ae67-9dd7dc0eb79f">
+      <column name="HandlerUserId" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="CreationTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="9d36048a-6d90-4d12-a202-040b529b4605">
+      <column name="CreationTime" not-null="True" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="CreatorId" type="Guid" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8de51ce5-994a-408e-98dc-a3d0f31b71b0">
+      <column name="CreatorId" not-null="False" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="LastModificationTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3a9fa253-4177-4a8f-abd1-205ea63fb5ad">
+      <column name="LastModificationTime" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="LastModifierId" type="Guid" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="df6a96cc-f698-48df-9953-afc240f3a2f2">
+      <column name="LastModifierId" not-null="False" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="WorkFlowManagementActivityDefinition" entity-set="WorkFlowManagementActivityDefinitions" table="WorkFlowManagementActivityDefinitions" schema="dbo" p1:Guid="cc7206a1-d6ff-473a-b05f-e39d53455a6f">
+    <id name="Id" type="String" p1:ValidateMaxLength="450" p1:ValidateRequired="true" p1:Guid="2a79303f-20e9-469c-b083-f457db7691ab">
+      <column name="Id" not-null="True" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </id>
+    <property name="WorkflowDefinitionVersionId" type="String" p1:nullable="True" p1:ValidateMaxLength="450" p1:ValidateRequired="false" p1:Guid="610c22f8-f2e1-4ab5-9de3-247edc4bb08e">
+      <column name="WorkflowDefinitionVersionId" not-null="False" length="450" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Type" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="86317cd6-ba79-4db9-995e-a0329da8241f">
+      <column name="Type" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f78dd130-27dd-4541-bf92-3a6dfa6002ab">
+      <column name="Name" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="DisplayName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="887928fd-1494-4b5c-bb1b-253917c640c0">
+      <column name="DisplayName" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Description" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cdd03934-c92e-4e52-9135-1be36b48cd46">
+      <column name="Description" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="Left" type="Int32" p1:ValidateRequired="true" p1:Guid="bfc7364f-363a-483f-9706-a8f27d4101ac">
+      <column name="`Left`" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Top" type="Int32" p1:ValidateRequired="true" p1:Guid="c6801530-6c66-4a81-96f0-ffe4b7e9f92e">
+      <column name="`Top`" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="State" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8ad00d8a-7d4a-433b-a2b8-1dfb1826a68b">
+      <column name="State" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+  </class>
+  <associations>
+    <association name="WorkFlowManagementWorkflowDefinitionVersion_WorkFlowManagementActivityDefinition" cardinality="OneToMany" p1:Guid="41f00836-3605-4fa8-8a86-5295676f2190">
+      <end1 multiplicity="ZeroOrOne" name="WorkFlowManagementWorkflowDefinitionVersion" class="WorkFlowManagementActivityDefinition" relation-class="WorkFlowManagementWorkflowDefinitionVersion" constrained="True" lazy="False" p1:Guid="f8e78a8f-5d93-47f0-a22d-ca7166f85525">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="WorkFlowManagementActivityDefinitions" class="WorkFlowManagementWorkflowDefinitionVersion" relation-class="WorkFlowManagementActivityDefinition" lazy="False" p1:Guid="dbe831a7-bef3-4bd4-a856-2844e91787f8">
+        <property name="WorkflowDefinitionVersionId" />
+      </end2>
+    </association>
+    <association name="WorkFlowManagementWorkflowInstance_WorkFlowManagementActivityInstance" cardinality="OneToMany" p1:Guid="15fa4817-dfda-4dca-920a-16758324cbb5">
+      <end1 multiplicity="ZeroOrOne" name="WorkFlowManagementWorkflowInstance" class="WorkFlowManagementActivityInstance" relation-class="WorkFlowManagementWorkflowInstance" constrained="True" lazy="False" p1:Guid="f439bf94-2dc8-447a-8498-e40b53e63ad0">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="WorkFlowManagementActivityInstances" class="WorkFlowManagementWorkflowInstance" relation-class="WorkFlowManagementActivityInstance" lazy="False" p1:Guid="d468dd12-a595-43c1-82c9-ec5aeda9dce9">
+        <property name="WorkflowInstanceId" />
+      </end2>
+    </association>
+    <association name="WorkFlowManagementWorkflowInstance_WorkFlowManagementBlockingActivity" cardinality="OneToMany" p1:Guid="43fc24d7-0608-45df-937c-8826a90aa3f9">
+      <end1 multiplicity="ZeroOrOne" name="WorkFlowManagementWorkflowInstance" class="WorkFlowManagementBlockingActivity" relation-class="WorkFlowManagementWorkflowInstance" constrained="True" lazy="False" p1:Guid="9aa11ca2-7241-481a-a240-b558e388fd11">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="WorkFlowManagementBlockingActivities" class="WorkFlowManagementWorkflowInstance" relation-class="WorkFlowManagementBlockingActivity" lazy="False" p1:Guid="5436b700-e15f-4983-9ad0-3468edb9a4cf">
+        <property name="WorkflowInstanceId" />
+      </end2>
+    </association>
+    <association name="WorkFlowManagementWorkflowDefinitionVersion_WorkFlowManagementConnectionDefinition" cardinality="OneToMany" p1:Guid="7f4079ed-5066-4b8f-acf0-cbb2748aa845">
+      <end1 multiplicity="ZeroOrOne" name="WorkFlowManagementWorkflowDefinitionVersion" class="WorkFlowManagementConnectionDefinition" relation-class="WorkFlowManagementWorkflowDefinitionVersion" constrained="True" lazy="False" p1:Guid="2925a108-0174-4b16-bde1-1b1daa8029dc">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="WorkFlowManagementConnectionDefinitions" class="WorkFlowManagementWorkflowDefinitionVersion" relation-class="WorkFlowManagementConnectionDefinition" lazy="False" p1:Guid="1f541ca9-f6c8-4468-822b-5c157d30c715">
+        <property name="WorkflowDefinitionVersionId" />
+      </end2>
+    </association>
+  </associations>
+</efcore>
